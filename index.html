@@ -3,14 +3,14 @@ layout: default
 lang: tr
 ---
 
-{% assign data = site.data.data.tr %}
+{% assign data = site.data[page.lang].data %}
 
-{% include career-profile.html data=d %}
-{% include sidebar.html data=d %}
-{% include experiences.html data=d %}
-{% include certifications.html data=d %}
-{% include projects.html data=d %}
-{% include oss-contributions.html data=d %}
-{% include publications.html data=d %}
-{% include recommendations.html data=d %}
-{% include skills.html data=d %}
+{% include career-profile.html data=data %}
+{% include education.html data=data %}
+{% include experiences.html data=data %}
+{% include certifications.html data=data %}
+{% include projects.html data=data %}
+{% include oss-contributions.html data=data %}
+{% include publications.html data=data %}
+{% include recommendations.html data=data %}
+{% include skills.html data=data %}

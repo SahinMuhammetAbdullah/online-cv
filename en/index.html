@@ -3,7 +3,7 @@ layout: default
 lang: en
 ---
 
-{% assign data = site.data.data.en %}
+{% assign data = site.data[page.lang].data %}
 
 {% include career-profile.html data=data %}
 {% include education.html data=data %}
