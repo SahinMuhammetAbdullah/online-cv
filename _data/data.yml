@@ -132,15 +132,24 @@ projects:
   intro: >
     Katıldığım ve liderlik ettiğim projelerde hem teknik uzmanlık hem de yaratıcı çözüm üretme becerimi yansıttım.
   assignments:
-    - title: CyberSecNet
-      link: "#"
-      tagline: "Gerçek zamanlı ağ trafiğini analiz ederek potansiyel tehditleri tespit eden siber güvenlik platformu."
-    - title: URL Malware Classifier
-      link: "#"
-      tagline: "Makine öğrenmesi ve pekiştirmeli öğrenme kullanarak URL'leri zararlı türlerine göre sınıflandıran model."
-    - title: SmartCampus ERP
-      link: "#"
-      tagline: "Üniversite kampüsleri için öğrenci, personel ve kaynak yönetimini entegre eden mikroservis tabanlı ERP yazılımı."
+    - title: SECMES
+      link: "https://github.com/SahinMuhammetAbdullah/secure-message"
+      tagline: "Gerçek zamanlı kullanılabilen ve RSA şifreleme yöntemi kullanan bir mesajlaşma uygulaması."
+    - title: Sanayi Turbo
+      link: "https://github.com/SahinMuhammetAbdullah/sanayi_turbo"
+      tagline: "Bu uygulama sanayi sektörüne yönelik geliştirilmiş tedarik-tedarikçi zincirine hizmet eden bir flutter uygulamasıdır. Bu uygulama firebase veri tabanı ile geliştirilmiştir."
+    - title: Lazaros Express
+      link: "https://github.com/lazarosExpress/lazaros"
+      tagline: "E-ticarat sistemi olarak geliştirilen bu uygulamada ise birden fazla satıcı ile pekçok alanda ürün ve hizmet sunulabilecek bir alış-veriş platformu geliştirilmiştir."
+    - title: Gradient Descent Algorithms
+      link: "https://github.com/SahinMuhammetAbdullah/gradientDescentAlgorithms"
+      tagline: "Bu uygulama makine öğrenimi giriş dersi kapsamındageliştirilmiştir. Kaggle platformunda bulunan bir veri seti kullanılmıştır. Gradient Descent algoritmasının kütüphane kullanılmadan temel matematiksel forümlleri üzerine kodlanmıştır."
+    - title: Backprobagation Algorithms
+      link: "https://github.com/SahinMuhammetAbdullah/backpropagation"
+      tagline: "Bu uygulama makine öğrenimi giriş dersi kapsamındageliştirilmiştir. Çarpım tablosu veri kümesi olarak kullanılmıştır. Backprobagation algoritmasının kütüphane kullanılmadan temel matematiksel forümlleri üzerine kodlanmıştır."
+    - title: orm-app
+      link: "https://github.com/SahinMuhammetAbdullah/orm-app"
+      tagline: "Bu uygulama veri tabanı laboratuvar kapsamındageliştirilmiştir. Entity Framework , SQL Server ve C# kullanarak geliştirilmiştir."
 
 # oss:
 #   title: OSS Contributions
@@ -192,17 +201,13 @@ skills:
 
   toolset:
     - name: Python (Machine Learning, Data Science, Backend)
-      level: 98%
-    - name: JavaScript & Node.js
-      level: 95%
-    - name: React & Angular
-      level: 92%
+      level: 75%
     - name: SQL, PostgreSQL, MongoDB
-      level: 90%
-    - name: DevOps (Docker, CI/CD, Linux)
-      level: 88%
+      level: 60%
+    - name: C Programing
+      level: 65%  
     - name: Cybersecurity & Network Analysis
-      level: 85%
+      level: 45%
 
 footer: >
   Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
