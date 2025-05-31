@@ -1,0 +1,207 @@
+#
+# Be aware that even a small syntax error here can lead to failures in output.
+#
+
+sidebar:
+  position: right # position of the sidebar: left or right
+  about: True # set to False or comment out this line if you want to remove the "how to use?" section in the sidebar
+  education: True # set to False if you want education to appear in the main section instead of the sidebar
+
+  # Profile information
+  name: Muhammet Abdullah ŞAHİN
+  tagline: Full Stack Developer
+  avatar: profile.png #place a 100x100 picture inside the /assets/images/ folder and provide the file name below
+
+  # Sidebar links
+  email: m.sahinabdullah@gmail.com
+  phone:
+  timezone: Turkey/Istanbul # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
+  citizenship:
+  website: https://masahin.dev/ # Include the full website URL, including "http://" or "https://".
+  linkedin: muhammet-abdullah-sahin
+  xing:
+  github: SahinMuhammetAbdullah
+  telegram:
+  gitlab:
+  bitbucket:
+  bluesky: # Specify your full Bluesky handle '@'
+  twitter:
+  stack-overflow: # Number/Username, e.g. 123456/alandoe
+  codewars:
+  goodreads: # Number-Username, e.g. 123456-alandoe
+  mastodon: # Please include your full Mastodon link here.
+  hackerrank: # Please provide your HackerRank username.
+  leetcode: # Please provide your LeetCode username.
+  pdf: # Add a PDF link here if you want to include a PDF custom version in your resume.
+
+  languages:
+    title: Languages
+    info:
+      - idiom: English
+        level: B2
+
+  # interests:
+  #   title: Interests
+  #   info:
+  #   - item: Volleyball
+  #     link:
+  #   - item: Basketball
+  #     link:
+  #   - item: Cinema
+  #     link:
+
+career-profile:
+  title: About Me
+  summary: |
+    I am a passionate and disciplined software developer. Throughout my academic journey, I have focused on areas such as algorithms, artificial intelligence, machine learning, and cybersecurity. I have combined technical expertise with strategic planning by taking on team leadership roles in various projects.
+
+    In the projects I develop, I focus on delivering solutions that prioritize user experience, performance, and sustainability. At the same time, I care deeply about producing educational content that contributes to the community and promoting it in Turkish.
+
+education:
+  title: Education
+  info:
+    # - degree: MSc in Computer Science
+    #   university: University of London
+    #   time: 2011 - 2012
+    #   details: |
+    #     During my master's in computer science, I gained in-depth knowledge in data structures, AI, secure software development, and machine learning.
+    #       - Thesis on deep learning and optimization techniques
+    #       - President of the Open Source Software Development Club
+    - degree: BSc in Computer Engineering
+      university: Ondokuz Mayıs University
+      time: 2021 - 2025
+      details: |
+        Gained proficiency in statistical analysis, algorithm development, and data modeling through both theoretical and applied computer science education.
+          - Developed applications for real-world problems
+          - Studied languages such as Python, JAVA, C, Ruby
+
+experiences:
+  title: Experience
+  info:
+    - role: Intern
+      time: 07.2024 - 08.2024
+      company: Havelsan
+      details: |
+        Completed my internship under the blue team within the cybersecurity operations center, focusing on vulnerability discovery and analysis through a virtual machine-based security lab.
+          - Virtual machine operations
+          - Firewall configuration
+          - Vulnerability analysis
+          - Penetration testing
+          - SIEM usage
+
+  # - role: Senior Software Engineer
+  #   time: 2014 - 2015
+  #   company: Google, London
+  #   details: |
+  #     Developed data optimization and security-focused solutions for large-scale systems.
+  #       - Applied distributed ML algorithms on big data
+  #       - Worked on API security and data integrity
+  # - role: UI Developer
+  #   time: 2012 - 2014
+  #   company: Amazon, London
+  #   details: |
+  #     Focused on enhancing user experience and frontend performance.
+  #       - Designed user-friendly interfaces with React.js
+  #       - Worked on mobile responsiveness and accessibility
+
+certifications:
+  title: Certifications
+  list:
+    - name: AI-Powered Web Application Development
+      start: 12.2023
+      end: 01.2024
+      organization: BTK Academy
+      credentialid: 6EMDiNqo9Ly
+      credentialurl: ttps://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=6EMDiNqo9Ly
+      credentialname: BTK Academy
+      details: |
+        Conducted a hands-on workshop where I developed an AI tool that could classify user reviews as positive or negative in a React-based e-commerce application.
+
+    - name: "Version Control: Git and GitHub"
+      start: 2024
+      organization: BTK Academy
+      credentialid: 9Xrtq2wzJK
+      credentialurl: https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=9Xrtq2wzJK
+      credentialname: BTK Academy
+      details: |
+        Gained and applied advanced knowledge of version control systems and team collaboration models.
+
+projects:
+  title: Projects
+  intro: >
+    Through the projects I have led and participated in, I showcased both my technical expertise and creative problem-solving abilities.
+  assignments:
+    - title: CyberSecNet
+      link: "#"
+      tagline: "A cybersecurity platform that detects potential threats by analyzing real-time network traffic."
+    - title: URL Malware Classifier
+      link: "#"
+      tagline: "A model that classifies URLs by malware type using machine learning and reinforcement learning."
+    - title: SmartCampus ERP
+      link: "#"
+      tagline: "A microservice-based ERP software integrating student, staff, and resource management for university campuses."
+
+# oss:
+#   title: OSS Contributions
+#   intro: >
+#     I actively contribute to the open-source world. My libraries and fixes have been used in different projects worldwide.
+#   contributions:
+#     - title: FastAPI Turkish Docs
+#       link: "#"
+#       tagline: "Contributions to Turkish documentation of the FastAPI framework."
+#     - title: URLClassifierPy
+#       link: "#"
+#       tagline: "An open-source ML library written in Python to classify URLs."
+#     - title: PyNetAnalyzer
+#       link: "#"
+#       tagline: "An open-source network monitoring tool capable of packet analysis."
+
+# publications:
+#   title: Publications
+#   intro: |
+#     I contribute to academic papers and research.
+#   papers:
+#     - title: URL-Based Threat Detection using Hybrid Machine Learning Models
+#       link: "#"
+#       authors: Muhammet Abdullah Şahin
+#       conference: "IEEE CyberSec Conference, 2024"
+#     - title: Real-Time Anomaly Detection in Network Traffic
+#       link: "#"
+#       authors: M.A. Şahin, Y. Öztürk
+#       conference: "International Symposium on Security Analytics, 2023"
+
+# recommendations:
+#   title: Recommendations
+#   list:
+#     - person: Yareli Perez
+#       email: perezyareli@example.com
+#       phone: 012 345 6789
+#       role: General Director at example.com
+#       recommendation: |
+#         Muhammet is a highly skilled developer with a sharp focus on innovation and security. He would be a great asset to any team.
+#     - person: Lara Henderson
+#       email: larah@example.com
+#       phone: 012 345 6789
+#       role: Project Manager at Google
+#       recommendation: |
+#         Working with Muhammet was a privilege. His attention to detail and ability to lead under pressure are exceptional.
+
+skills:
+  title: Skills & Proficiency
+
+  toolset:
+    - name: Python (Machine Learning, Data Science, Backend)
+      level: 98%
+    - name: JavaScript & Node.js
+      level: 95%
+    - name: React & Angular
+      level: 92%
+    - name: SQL, PostgreSQL, MongoDB
+      level: 90%
+    - name: DevOps (Docker, CI/CD, Linux)
+      level: 88%
+    - name: Cybersecurity & Network Analysis
+      level: 85%
+
+footer: >
+  Designed and maintained by <strong>Muhammet Abdullah Şahin</strong> – Open Source Enthusiast & AI Developer.
