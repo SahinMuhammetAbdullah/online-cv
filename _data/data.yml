@@ -17,7 +17,7 @@ sidebar:
   phone:
   timezone: Turkey/Istanbul # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
   citizenship:
-  website: https://masahin.dev/ # Include the full website URL, including "http://" or "https://".
+  website: https://masahin.dev/ https://blog.masahin.dev/# Include the full website URL, including "http://" or "https://".
   linkedin: muhammet-abdullah-sahin
   xing: # alandoe
   github: SahinMuhammetAbdullah
@@ -141,13 +141,13 @@ projects:
       tagline: "E-ticarat sistemi olarak geliştirilen bu uygulamada ise birden fazla satıcı ile pekçok alanda ürün ve hizmet sunulabilecek bir alış-veriş platformu geliştirilmiştir."
     - title: Gradient Descent Algorithms
       link: "https://github.com/SahinMuhammetAbdullah/gradientDescentAlgorithms"
-      tagline: "Bu uygulama makine öğrenimi giriş dersi kapsamındageliştirilmiştir. Kaggle platformunda bulunan bir veri seti kullanılmıştır. Gradient Descent algoritmasının kütüphane kullanılmadan temel matematiksel forümlleri üzerine kodlanmıştır."
+      tagline: "Bu uygulama makine öğrenimi giriş dersi kapsamında geliştirilmiştir. Kaggle platformunda bulunan bir veri seti kullanılmıştır. Gradient Descent algoritmasının kütüphane kullanılmadan temel matematiksel forümlleri üzerine kodlanmıştır."
     - title: Backprobagation Algorithms
       link: "https://github.com/SahinMuhammetAbdullah/backpropagation"
-      tagline: "Bu uygulama makine öğrenimi giriş dersi kapsamındageliştirilmiştir. Çarpım tablosu veri kümesi olarak kullanılmıştır. Backprobagation algoritmasının kütüphane kullanılmadan temel matematiksel forümlleri üzerine kodlanmıştır."
+      tagline: "Bu uygulama makine öğrenimi giriş dersi kapsamında geliştirilmiştir. Çarpım tablosu veri kümesi olarak kullanılmıştır. Backprobagation algoritmasının kütüphane kullanılmadan temel matematiksel forümlleri üzerine kodlanmıştır."
     - title: orm-app
       link: "https://github.com/SahinMuhammetAbdullah/orm-app"
-      tagline: "Bu uygulama veri tabanı laboratuvar kapsamındageliştirilmiştir. Entity Framework, SQL Server ve C# kullanarak geliştirilmiştir."
+      tagline: "Bu uygulama veri tabanı laboratuvar kapsamında geliştirilmiştir. Entity Framework, SQL Server ve C# kullanarak geliştirilmiştir."
 
 # oss:
 #   title: OSS Contributions
