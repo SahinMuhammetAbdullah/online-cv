@@ -17,7 +17,8 @@ sidebar:
   phone:
   timezone: Turkey/Istanbul # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
   citizenship:
-  website: https://masahin.dev/ https://blog.masahin.dev/# Include the full website URL, including "http://" or "https://".
+  website: https://masahin.dev/ # Include the full website URL, including "http://" or "https://".
+  website2: https://blog.masahin.dev/ # Include the full website URL, including "http://" or "https://".
   linkedin: muhammet-abdullah-sahin
   xing: # alandoe
   github: SahinMuhammetAbdullah
