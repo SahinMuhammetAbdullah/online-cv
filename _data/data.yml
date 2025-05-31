@@ -14,7 +14,7 @@ sidebar:
 
   # Sidebar links
   email: m.sahinabdullah@gmail.com
-  phone: 012 345 6789
+  phone:
   timezone: Turkey/Istanbul # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
   citizenship:
   website: https://masahin.dev/ # Include the full website URL, including "http://" or "https://".
@@ -37,7 +37,7 @@ sidebar:
   languages:
     title: Diller
     info:
-      - idiom: English
+      - idiom: İngilizce
         level: B2
 
   # interests:
@@ -116,7 +116,7 @@ certifications:
       credentialurl: ttps://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=6EMDiNqo9Ly
       credentialname: BTK Akademi
       details: |
-        Derin öğrenme, bayesçi yöntemler, zaman serileri, NLP ve pekiştirmeli öğrenme üzerine kapsamlı içerikler tamamlandı.
+        React tabanlı geliştirilen bir e-ticaret uygulamasında yorumlar üzerinde olumlu-olumsuz testpiti yapabilen bir yapay zeka aracı geliştirilmesi üzerine gerçekleştirilen bir atölye çalışması uyguladım.
 
     - name: "Versiyon Kontrolleri: Git ve GitHub"
       start: 2024
@@ -128,7 +128,7 @@ certifications:
         Versiyon kontrol sistemlerinin ileri seviye kullanımını ve takım içi iş birliği modellerini detaylı olarak öğrenip uyguladım.
 
 projects:
-  title: Projects
+  title: Projeler
   intro: >
     Katıldığım ve liderlik ettiğim projelerde hem teknik uzmanlık hem de yaratıcı çözüm üretme becerimi yansıttım.
   assignments:
@@ -142,53 +142,53 @@ projects:
       link: "#"
       tagline: "Üniversite kampüsleri için öğrenci, personel ve kaynak yönetimini entegre eden mikroservis tabanlı ERP yazılımı."
 
-oss:
-  title: OSS Contributions
-  intro: >
-    Açık kaynak dünyasına aktif olarak katkı sağlıyorum. Geliştirdiğim kütüphaneler ve düzeltmeler dünya genelinde farklı projelerde kullanıldı.
-  contributions:
-    - title: FastAPI Turkish Docs
-      link: "#"
-      tagline: "FastAPI framework'ü için Türkçe dokümantasyon katkıları."
-    - title: URLClassifierPy
-      link: "#"
-      tagline: "Python ile geliştirilmiş, URL'leri sınıflandırmak için açık kaynak ML kütüphanesi."
-    - title: PyNetAnalyzer
-      link: "#"
-      tagline: "Paket analizi yapabilen açık kaynaklı ağ izleme aracı."
+# oss:
+#   title: OSS Contributions
+#   intro: >
+#     Açık kaynak dünyasına aktif olarak katkı sağlıyorum. Geliştirdiğim kütüphaneler ve düzeltmeler dünya genelinde farklı projelerde kullanıldı.
+#   contributions:
+#     - title: FastAPI Turkish Docs
+#       link: "#"
+#       tagline: "FastAPI framework'ü için Türkçe dokümantasyon katkıları."
+#     - title: URLClassifierPy
+#       link: "#"
+#       tagline: "Python ile geliştirilmiş, URL'leri sınıflandırmak için açık kaynak ML kütüphanesi."
+#     - title: PyNetAnalyzer
+#       link: "#"
+#       tagline: "Paket analizi yapabilen açık kaynaklı ağ izleme aracı."
 
-publications:
-  title: Publications
-  intro: |
-    Akademik yazılara ve araştırmalara katkıda bulunuyorum.
-  papers:
-    - title: URL-Based Threat Detection using Hybrid Machine Learning Models
-      link: "#"
-      authors: Muhammet Abdullah Şahin
-      conference: "IEEE CyberSec Conference, 2024"
-    - title: Real-Time Anomaly Detection in Network Traffic
-      link: "#"
-      authors: M.A. Şahin, Y. Öztürk
-      conference: "International Symposium on Security Analytics, 2023"
+# publications:
+#   title: Publications
+#   intro: |
+#     Akademik yazılara ve araştırmalara katkıda bulunuyorum.
+#   papers:
+#     - title: URL-Based Threat Detection using Hybrid Machine Learning Models
+#       link: "#"
+#       authors: Muhammet Abdullah Şahin
+#       conference: "IEEE CyberSec Conference, 2024"
+#     - title: Real-Time Anomaly Detection in Network Traffic
+#       link: "#"
+#       authors: M.A. Şahin, Y. Öztürk
+#       conference: "International Symposium on Security Analytics, 2023"
 
-recommendations:
-  title: Recommendations
-  list:
-    - person: Yareli Perez
-      email: perezyareli@example.com
-      phone: 012 345 6789
-      role: General Director at example.com
-      recommendation: |
-        Muhammet is a highly skilled developer with a sharp focus on innovation and security. He would be a great asset to any team.
-    - person: Lara Henderson
-      email: larah@example.com
-      phone: 012 345 6789
-      role: Project Manager at Google
-      recommendation: |
-        Working with Muhammet was a privilege. His attention to detail and ability to lead under pressure are exceptional.
+# recommendations:
+#   title: Recommendations
+#   list:
+#     - person: Yareli Perez
+#       email: perezyareli@example.com
+#       phone: 012 345 6789
+#       role: General Director at example.com
+#       recommendation: |
+#         Muhammet is a highly skilled developer with a sharp focus on innovation and security. He would be a great asset to any team.
+#     - person: Lara Henderson
+#       email: larah@example.com
+#       phone: 012 345 6789
+#       role: Project Manager at Google
+#       recommendation: |
+#         Working with Muhammet was a privilege. His attention to detail and ability to lead under pressure are exceptional.
 
 skills:
-  title: Skills & Proficiency
+  title: Beceri & Yeterlilik
 
   toolset:
     - name: Python (Machine Learning, Data Science, Backend)
