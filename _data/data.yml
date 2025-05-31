@@ -8,7 +8,7 @@ sidebar:
   education: True # set to False if you want education in main section instead of in sidebar
 
   # Profile information
-  name: Muhammet Abdullah ŞAHİN
+  name: Muhammet Abdullah Şahin
   tagline: Full Stack Developer
   avatar: profile.png #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
@@ -37,20 +37,18 @@ sidebar:
   languages:
     title: Diller
     info:
+      - idiom: Türkçe
+        level: Anadil
       - idiom: İngilizce
-        level: B2
+        level: B1
 
-  # interests:
-  #   title: İlgi Alaları
-  #   info:
-  #   - item: Voleybol
-  #     link:
-
-  #   - item: Basketbol
-  #     link:
-
-  #   - item: Sin
-  #     link:
+  interests:
+    title: İlgi Alaları
+    info:
+    - item: Voleybol
+      link:
+    - item: Basketbol
+      link:
 
 career-profile:
   title: Hakkımda
@@ -119,7 +117,7 @@ certifications:
         React tabanlı geliştirilen bir e-ticaret uygulamasında yorumlar üzerinde olumlu-olumsuz testpiti yapabilen bir yapay zeka aracı geliştirilmesi üzerine gerçekleştirilen bir atölye çalışması uyguladım.
 
     - name: "Versiyon Kontrolleri: Git ve GitHub"
-      start: 2024
+      start: 08.2024
       organization: BTK Akademi
       credentialid: 9Xrtq2wzJK
       credentialurl: https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=9Xrtq2wzJK
@@ -149,7 +147,7 @@ projects:
       tagline: "Bu uygulama makine öğrenimi giriş dersi kapsamındageliştirilmiştir. Çarpım tablosu veri kümesi olarak kullanılmıştır. Backprobagation algoritmasının kütüphane kullanılmadan temel matematiksel forümlleri üzerine kodlanmıştır."
     - title: orm-app
       link: "https://github.com/SahinMuhammetAbdullah/orm-app"
-      tagline: "Bu uygulama veri tabanı laboratuvar kapsamındageliştirilmiştir. Entity Framework , SQL Server ve C# kullanarak geliştirilmiştir."
+      tagline: "Bu uygulama veri tabanı laboratuvar kapsamındageliştirilmiştir. Entity Framework, SQL Server ve C# kullanarak geliştirilmiştir."
 
 # oss:
 #   title: OSS Contributions
