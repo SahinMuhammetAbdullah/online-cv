@@ -1,0 +1,207 @@
+#
+# Be aware that even a small syntax error here can lead to failures in output.
+#
+
+sidebar:
+  position: right # position of the sidebar : left or right
+  about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
+  education: True # set to False if you want education in main section instead of in sidebar
+
+  # Profile information
+  name: Muhammet Abdullah ŞAHİN
+  tagline: Full Stack Developer
+  avatar: profile.png #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+
+  # Sidebar links
+  email: m.sahinabdullah@gmail.com
+  phone: 012 345 6789
+  timezone: Turkey/Istanbul # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
+  citizenship:
+  website: https://masahin.dev/ # Include the full website URL, including "http://" or "https://".
+  linkedin: muhammet-abdullah-sahin
+  xing:   # alandoe
+  github: SahinMuhammetAbdullah
+  telegram: # add your nickname without '@' sign
+  gitlab:
+  bitbucket:
+  bluesky: # Specify your full Bluesky handle '@' 
+  twitter:
+  stack-overflow: # Number/Username, e.g. 123456/alandoe
+  codewars:
+  goodreads: # Number-Username, e.g. 123456-alandoe
+  mastodon: # Please include your full Mastodon link here.
+  hackerrank: # Please provide your HackerRank username.
+  leetcode: # Please provide your LeetCode username.
+  pdf: # Add a PDF link here if you want to include a PDF custom version in your resume.
+
+  languages:
+    title: Diller
+    info:
+    - idiom: English
+      level: B2
+
+  # interests:
+  #   title: İlgi Alaları
+  #   info:
+  #   - item: Voleybol
+  #     link:
+
+
+  #   - item: Basketbol
+  #     link:
+
+
+  #   - item: Sin
+  #     link:
+
+
+career-profile:
+  title: Career Profile
+  summary: |
+    Tutkulu ve disiplinli bir yazılım geliştiriciyim. Akademik geçmişim boyunca algoritmalar, yapay zeka, makine öğrenimi ve siber güvenlik gibi alanlarda yoğunlaştım. Çeşitli projelerde ekip liderliği üstlenerek teknik bilgi ile stratejik planlamayı birleştirdim. Açık kaynak katkılarım ve sürekli öğrenme arzum, beni her zaman güncel teknolojilere açık ve çözüm odaklı biri yapıyor.
+    
+    Geliştirdiğim projelerde kullanıcı deneyimi, performans ve sürdürülebilirlik odaklı çözümler üretmeye odaklanıyorum. Aynı zamanda topluma katkı sağlayacak eğitim içerikleri üretmeye ve bu içerikleri Türkçe olarak yaygınlaştırmaya önem veriyorum.
+
+education:
+  title: Education
+  info:
+  - degree: MSc in Computer Science
+    university: University of London
+    time: 2011 - 2012
+    details: |
+      Bilgisayar bilimi alanında yüksek lisans eğitimimde veri yapıları, yapay zeka, güvenli yazılım geliştirme ve makine öğrenimi konularında derinlemesine bilgi edindim.
+        - Derin öğrenme ve optimizasyon teknikleri üzerine tez çalışması
+        - Açık kaynak yazılım geliştirme kulübü başkanlığı
+  - degree: BSc in Applied Mathematics
+    university: Bristol University
+    time: 2007 - 2011
+    details: |
+      Uygulamalı matematik eğitimi ile birlikte istatistiksel analiz, algoritma geliştirme ve veri modelleme alanlarında yetkinlik kazandım.
+        - Gerçek hayat problemleri için diferansiyel denklemlerle modelleme
+        - Python ve R ile veri analizi projeleri
+
+experiences:
+  title: Experiences
+  info:
+  - role: Lead Developer
+    time: 2015 - Present
+    company: Startup Hubs, San Francisco
+    details: |
+      Yeni nesil girişimlere yazılım mimarisi danışmanlığı sağladım, sıfırdan ürün geliştirerek pazara sunulmasını sağladım.
+        - Mikro servis mimarisi ile yüksek erişilebilir sistemler geliştirdim
+        - 10+ kişilik yazılım ekibini yönettim
+  - role: Senior Software Engineer
+    time: 2014 - 2015
+    company: Google, London
+    details: |
+      Büyük ölçekli sistemlerde veri optimizasyonu ve güvenlik odaklı çözümler geliştirdim.
+        - Büyük veri üzerinde dağıtık makine öğrenimi algoritmaları uyguladım
+        - API güvenliği ve veri bütünlüğü konularında geliştirmeler yaptım
+  - role: UI Developer
+    time: 2012 - 2014
+    company: Amazon, London
+    details: |
+      Kullanıcı deneyimi ve ön yüz performansını iyileştirmeye odaklandım.
+        - React.js ile kullanıcı dostu ara yüzler tasarladım
+        - Mobil uyumluluk ve erişilebilirlik üzerine çalıştım
+
+certifications:
+  title: Certifications
+  list:
+  - name: Advanced Machine Learning Specialization
+    start: 2020
+    end: 2021
+    organization: Coursera (by HSE & Yandex)
+    credentialid: HSE-ML-ADV
+    credentialurl: www.coursera.org/certificates/hse-ml-adv
+    credentialname: Coursera
+    details: |
+      Derin öğrenme, bayesçi yöntemler, zaman serileri, NLP ve pekiştirmeli öğrenme üzerine kapsamlı içerikler tamamlandı.
+  - name: Git & Version Control Mastery
+    start: 2019
+    organization: GitHub
+    credentialid: GIT-HUB-VCM
+    credentialurl: www.github.com
+    credentialname: GitHub
+    details: |
+      Versiyon kontrol sistemlerinin ileri seviye kullanımını ve takım içi iş birliği modellerini detaylı olarak öğrenip uyguladım.
+
+projects:
+  title: Projects
+  intro: >
+    Katıldığım ve liderlik ettiğim projelerde hem teknik uzmanlık hem de yaratıcı çözüm üretme becerimi yansıttım.
+  assignments:
+  - title: CyberSecNet
+    link: "#"
+    tagline: "Gerçek zamanlı ağ trafiğini analiz ederek potansiyel tehditleri tespit eden siber güvenlik platformu."
+  - title: URL Malware Classifier
+    link: "#"
+    tagline: "Makine öğrenmesi ve pekiştirmeli öğrenme kullanarak URL'leri zararlı türlerine göre sınıflandıran model."
+  - title: SmartCampus ERP
+    link: "#"
+    tagline: "Üniversite kampüsleri için öğrenci, personel ve kaynak yönetimini entegre eden mikroservis tabanlı ERP yazılımı."
+
+oss:
+  title: OSS Contributions
+  intro: >
+    Açık kaynak dünyasına aktif olarak katkı sağlıyorum. Geliştirdiğim kütüphaneler ve düzeltmeler dünya genelinde farklı projelerde kullanıldı.
+  contributions:
+  - title: FastAPI Turkish Docs
+    link: "#"
+    tagline: "FastAPI framework'ü için Türkçe dokümantasyon katkıları."
+  - title: URLClassifierPy
+    link: "#"
+    tagline: "Python ile geliştirilmiş, URL'leri sınıflandırmak için açık kaynak ML kütüphanesi."
+  - title: PyNetAnalyzer
+    link: "#"
+    tagline: "Paket analizi yapabilen açık kaynaklı ağ izleme aracı."
+
+publications:
+  title: Publications
+  intro: |
+    Akademik yazılara ve araştırmalara katkıda bulunuyorum.
+  papers:
+  - title: URL-Based Threat Detection using Hybrid Machine Learning Models
+    link: "#"
+    authors: Muhammet Abdullah Şahin
+    conference: "IEEE CyberSec Conference, 2024"
+  - title: Real-Time Anomaly Detection in Network Traffic
+    link: "#"
+    authors: M.A. Şahin, Y. Öztürk
+    conference: "International Symposium on Security Analytics, 2023"
+
+recommendations:
+  title: Recommendations
+  list:
+  - person: Yareli Perez
+    email: perezyareli@example.com
+    phone: 012 345 6789
+    role: General Director at example.com
+    recommendation: |
+      Muhammet is a highly skilled developer with a sharp focus on innovation and security. He would be a great asset to any team.
+  - person: Lara Henderson
+    email: larah@example.com
+    phone: 012 345 6789
+    role: Project Manager at Google
+    recommendation: |
+      Working with Muhammet was a privilege. His attention to detail and ability to lead under pressure are exceptional.
+
+skills:
+  title: Skills & Proficiency
+
+  toolset:
+  - name: Python (Machine Learning, Data Science, Backend)
+    level: 98%
+  - name: JavaScript & Node.js
+    level: 95%
+  - name: React & Angular
+    level: 92%
+  - name: SQL, PostgreSQL, MongoDB
+    level: 90%
+  - name: DevOps (Docker, CI/CD, Linux)
+    level: 88%
+  - name: Cybersecurity & Network Analysis
+    level: 85%
+
+footer: >
+  Designed and maintained by <strong>Muhammet Abdullah Şahin</strong> – Open Source Enthusiast & AI Developer.
