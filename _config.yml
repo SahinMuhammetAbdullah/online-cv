@@ -28,3 +28,12 @@ port: 4000
 host: 0.0.0.0
 safe: false
 
+default_lang: tr
+
+languages:
+  - tr
+  - en
+
+data_files:
+  tr: data.tr
+  en: data.en
