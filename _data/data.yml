@@ -199,13 +199,17 @@ skills:
   title: Beceri & Yeterlilik
 
   toolset:
-    - name: Python (Machine Learning, Data Science, Backend)
+    - name: Python
       level: 75%
-    - name: SQL, PostgreSQL, MongoDB
+    - name: Flutter
       level: 60%
+    - name: JAVA
+      level: 65%
     - name: C Programing
       level: 65%  
-    - name: Cybersecurity & Network Analysis
+    - name: SQL
+      level: 60%
+    - name: Siber Güvenlik Yetkinliği
       level: 45%
 
 footer: >
