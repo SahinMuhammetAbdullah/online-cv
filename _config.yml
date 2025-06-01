@@ -24,6 +24,6 @@ compress_html:
     envs: development
 
 # Development Settings
-port: 4000
-host: 0.0.0.0
-safe: false
+# port: 4000
+# host: 0.0.0.0
+# safe: false
