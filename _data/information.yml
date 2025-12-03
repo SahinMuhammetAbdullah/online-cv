@@ -5,7 +5,7 @@ personal:
   image_initials: "MAŞ"
   image_path: "/assets/img/profile.png"
   email: "m.sahinabdullah@gmail.com"
-  phone: "+90 555 123 45 67"
+  # phone: ""
   location: "Samsun, Türkiye"
   linkedin: "muhammet-abdullah-sahin"
   github: "SahinMuhammetAbdullah"
