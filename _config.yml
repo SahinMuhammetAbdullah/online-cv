@@ -1,29 +1,20 @@
-# Site Settings
-title: Özgeçmiş
-url: 'https://cv.masahin.dev'
+# _config.yml
 
-description: A beautiful Jekyll theme for creating resume
-theme_skin: ceramic
-chrome_mobile_color:
+title: Muhammet Abdullah Şahin - CV
+email: iletisim@ornek.com
+description: >- # Google'da görünecek açıklama
+  Muhammet Abdullah Şahin'in profesyonel CV'si. Python, Flutter ve AI alanında çalışmalar.
+baseurl: "" 
+url: "https://cv.masahin.dev" 
 
-# Tracker
-analytics:
+# --- TEMA SEÇİMİ ---
+# Seçenekler: 'modern-ide' VEYA 'corporate-blue'
+cv_theme: "modern-ide" 
 
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed
+# --- SEO & EKLENTİLER ---
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
-# Build settings
-compress-site: yes
-
-encoding: "utf-8"
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
-
-# Development Settings
-# port: 4000
-# host: 0.0.0.0
-# safe: false
+# PDF İndirme Özelliği İçin
+enable_pdf_download: true

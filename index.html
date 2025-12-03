@@ -1,24 +1,60 @@
 ---
-layout: default
+layout: null
 ---
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MAS - CV" />
+    <link rel="manifest" href="/assets/icons/site.webmanifest" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.analytics }}"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-KYZKRZHJ12');
+    </script>
+    
+    {% seo %}
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
 
-{% include career-profile.html %}
+    {% if site.cv_theme == 'modern-ide' %}
+        {% include themes/modern-ide.html %}
+    {% elsif site.cv_theme == 'corporate-blue' %}
+        {% include themes/corporate-blue.html %}
+    {% else %}
+        <p style="text-align:center; padding:50px;">Lütfen _config.yml dosyasından geçerli bir tema seçin.</p>
+    {% endif %}
 
-{% unless site.data.data.sidebar.education %}
-  {% include education.html %}
-{% endunless %}
+    <script>
+        function downloadPDF() {
+            const element = document.getElementById('cvContent');
+            // Butonları gizle
+            const controls = document.querySelector('.controls');
+            if(controls) controls.style.display = 'none';
 
-{% include experiences.html %}
+            const opt = {
+                margin: 0,
+                filename: '{{ site.data.information.personal.name | slugify }}_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
 
-{% include certifications.html %}
-
-{% include projects.html %}
-
-{% include oss-contributions.html %}
-
-{% include publications.html %}
-
-{% include recommendations.html %}
-
-{% include skills.html %}
+            html2pdf().set(opt).from(element).save().then(() => {
+                if(controls) controls.style.display = 'flex';
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+# _data/information.yml
+
+personal:
+  name: "Muhammet Abdullah Şahin"
+  image_initials: "MAŞ"
+  image_path: "/assets/img/profile.png"
+  email: "m.sahinabdullah@gmail.com"
+  phone: "+90 555 123 45 67"
+  location: "Samsun, Türkiye"
+  linkedin: "muhammet-abdullah-sahin"
+  github: "SahinMuhammetAbdullah"
+  website: "www.masahin.dev"
+  blog: "blog.masahin.dev"
+  notepage: "note.masahin.dev"
+
+  title_tr: "Yazılım Geliştirici & AI Araştırmacısı"
+  title_en: "Software Developer & AI Researcher"
+  
+  about_tr: "Tutkulu ve disiplinli bir yazılım geliştiriciyim. Akademik geçmişim boyunca algoritmalar, yapay zeka, makine öğrenimi ve siber güvenlik gibi alanlarda yoğunlaştım. Geliştirdiğim projelerde kullanıcı deneyimi, performans ve sürdürülebilirlik odaklı çözümler üretmeye odaklanıyorum."
+  about_en: "I am a passionate and disciplined software developer. Throughout my academic background, I have focused on algorithms, AI, machine learning, and cybersecurity. I focus on producing user experience, performance, and sustainability-oriented solutions in the projects I develop."
+
+languages:
+  - name_tr: "Türkçe"
+    name_en: "Turkish"
+    level_tr: "Anadil"
+    level_en: "Native"
+  - name_tr: "İngilizce"
+    name_en: "English"
+    level_tr: "Orta Seviye (B1)"
+    level_en: "Intermediate (B1)"
+
+skills:
+  - name: "Python"
+    level: 95
+  - name: "Flutter / Dart"
+    level: 90
+  - name: "Java"
+    level: 85
+  - name: "C#"
+    level: 80
+  - name: "SQL"
+    level: 80
+  - name: "Siber Güvenlik"
+    level: 70
+
+experience:
+  - role_tr: "Stajyer"
+    role_en: "Intern"
+    company: "Havelsan"
+    date_tr: "07.2024 - 08.2024"
+    date_en: "07.2024 - 08.2024"
+    details_tr:
+      - "Mavi takım altında, siber güvenlik operasyon merkezi (SOC) kapsamında sanal makine laboratuvarı oluşturuldu."
+      - "Güvenlik açıkları keşfi, zafiyet analizi ve sızma testleri gerçekleştirildi."
+      - "Güvenlik duvarı oluşturma ve SIEM araçları deneyimlendi."
+    details_en:
+      - "Created a virtual machine laboratory under the Blue Team within the scope of the Security Operations Center (SOC)."
+      - "Performed security vulnerability discovery, vulnerability analysis, and penetration testing."
+      - "Experienced in firewall creation and SIEM tools."
+
+projects:
+  - title: URLDet | Zararlı URL Analizi
+    link: "https://urldet.masahin.dev/"
+    tags: ["Security", "AI", "Python", "JavaScript"]
+    desc_tr: "Python ve React JS ile geliştirilen, 1 milyon+ veri üzerinde %97 doğruluk sağlayan, Random Forest ve Pekiştirmeli Öğrenme (RL) destekli iki aşamalı (tespit ve sınıflandırma) hibrit siber güvenlik sistemi ve tarayıcı eklentisi."
+    desc_en: "A two-stage (detection and classification) hybrid cybersecurity system and browser extension developed with Python and React JS, supported by Random Forest and Reinforcement Learning (RL), achieving over 97% accuracy on 1 million+ data points."
+
+  - title: "SECMES"
+    link: "https://github.com/SahinMuhammetAbdullah/secure-message"
+    tags: ["Security", "RSA", "Real-time"]
+    desc_tr: "Gerçek zamanlı kullanılabilen ve RSA şifreleme yöntemi kullanan güvenli bir mesajlaşma uygulaması."
+    desc_en: "A real-time secure messaging application using RSA encryption method."
+  
+  - title: "Sanayi Turbo"
+    link: "https://github.com/SahinMuhammetAbdullah/sanayi_turbo"
+    tags: ["Flutter", "Firebase", "Mobile"]
+    desc_tr: "Sanayi sektörüne yönelik, tedarikçi zincirine hizmet eden Firebase tabanlı Flutter uygulaması."
+    desc_en: "A Firebase-based Flutter application serving the supply chain for the industrial sector."
+
+  - title: "Lazaros Express"
+    link: "https://github.com/lazarosExpress/lazaros"
+    tags: ["E-Commerce", "Platform", "Web"]
+    desc_tr: "Birden fazla satıcı ile pek çok alanda ürün ve hizmet sunulabilen kapsamlı bir e-ticaret platformu."
+    desc_en: "A comprehensive e-commerce platform where multiple vendors can offer products and services in various fields."
+
+  - title: "Gradient Descent Algorithms"
+    link: "https://github.com/SahinMuhammetAbdullah/gradientDescentAlgorithms"
+    tags: ["Python", "Machine Learning", "Math"]
+    desc_tr: "Kütüphane kullanmadan, temel matematiksel formüller üzerine kodlanmış Gradient Descent algoritması."
+    desc_en: "Gradient Descent algorithm coded on basic mathematical formulas without using libraries."
+
+  - title: "Backpropagation Algorithms"
+    link: "https://github.com/SahinMuhammetAbdullah/backpropagation"
+    tags: ["Python", "AI", "Math"]
+    desc_tr: "Kütüphane kullanmadan, temel matematiksel formüller üzerine kodlanmış Geri Yayılım (Backpropagation) algoritması."
+    desc_en: "Backpropagation algorithm coded on basic mathematical formulas without using libraries."
+
+  - title: "ORM App"
+    link: "https://github.com/SahinMuhammetAbdullah/orm-app"
+    tags: ["C#", "SQL Server", "Entity Framework"]
+    desc_tr: "Veri tabanı laboratuvarı kapsamında Entity Framework, SQL Server ve C# kullanılarak geliştirilen uygulama."
+    desc_en: "Application developed using Entity Framework, SQL Server, and C# within the scope of the database laboratory."
+
+education:
+  - school: "Ondokuz Mayıs Üniversitesi"
+    degree_tr: "Bilgisayar Mühendisliği (Lisans)"
+    degree_en: "Computer Engineering (BSc)"
+    date: "2021 - 2025"
+
+# YETKİNLİKLER (Soft Skills)
+soft_skills:
+  - name_tr: "Takım Liderliği"
+    name_en: "Team Leadership"
+  - name_tr: "Agile / Scrum"
+    name_en: "Agile / Scrum"
+  - name_tr: "Problem Çözme"
+    name_en: "Problem Solving"
+  - name_tr: "Zaman Yönetimi"
+    name_en: "Time Management"
+
+# İLGİ ALANLARI
+interests:
+  - name_tr: "Açık Kaynak"
+    name_en: "Open Source"
+  - name_tr: "Yapay Zeka"
+    name_en: "Artificial Intelligence"
+  - name_tr: "Voleybol"
+    name_en: "Volleyball"
+  - name_tr: "Basketbol"
+    name_en: "Basketball"
+
+# REFERANSLAR
+references:
+  - name: "Assoc. Prof. Dr. Sercan Demirci"
+    title: "Ondokuz Mayis University"
+    email: "sercan.demirci@omu.edu.tr"
+  - name: "Assoc. Prof. Dr. Durmuş Özkan Şahin"
+    title: "Ondokuz Mayis University"
+    email: "durmus.sahin@omu.edu.tr"

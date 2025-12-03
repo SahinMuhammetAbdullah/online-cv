@@ -1,0 +1,253 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/corporate-blue.css">
+
+<canvas id="bgCanvas"></canvas>
+
+<div class="controls">
+    <button class="btn btn-lang" onclick="toggleLang()">
+        <i class="fas fa-globe"></i> <span id="langLabel">TR / EN</span>
+    </button>
+    {% if site.enable_pdf_download %}
+    <button class="btn btn-download" onclick="downloadPDF()">
+        <i class="fas fa-file-pdf"></i> PDF
+    </button>
+    {% endif %}
+</div>
+
+<div class="cv-container" id="cvContent">
+    <div class="left-column">
+        {% if site.data.information.personal.image_path and site.data.information.personal.image_path != "" %}
+            <img src="{{ site.baseurl }}{{ site.data.information.personal.image_path }}" class="profile-image profile-img-fit" alt="Profile">
+        {% elsif site.data.information.personal.image_initials %}
+            <div class="profile-image">
+                {{ site.data.information.personal.image_initials }}
+            </div>
+        {% endif %}
+        
+        <div class="section">
+            <div class="section-title"><i class="fas fa-address-card"></i> <span class="lang-text" data-tr="İLETİŞİM" data-en="CONTACT">İLETİŞİM</span></div>
+            
+            {% if site.data.information.personal.phone and site.data.information.personal.phone != "" %}
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                <span>
+                    <a href="tel:{{ site.data.information.personal.phone }}" target="_blank" style="color:inherit; text-decoration:none;">
+                        {{ site.data.information.personal.phone }}
+                    </a>
+                </span>
+            </div>
+            {% endif %}
+            
+            {% if site.data.information.personal.email and site.data.information.personal.email != "" %}
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                <span>
+                    <a href="mailto:{{ site.data.information.personal.email }}" target="_blank" style="color:inherit; text-decoration:none;">
+                        {{ site.data.information.personal.email }}
+                    </a>
+                </span>
+            </div>
+            {% endif %}
+            
+            {% if site.data.information.personal.location and site.data.information.personal.location != "" %}
+            <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><span>{{ site.data.information.personal.location }}</span></div>
+            {% endif %}
+
+            {% if site.data.information.personal.github and site.data.information.personal.github != "" %}
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fab fa-github"></i></div>
+                <span>
+                    <a href="https://github.com/{{ site.data.information.personal.github }}" target="_blank" style="color:inherit; text-decoration:none;">
+                        {{ site.data.information.personal.github }}
+                    </a>
+                </span>
+            </div>
+            {% endif %}
+
+            {% if site.data.information.personal.linkedin and site.data.information.personal.linkedin != "" %}
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                <span>
+                    <a href="https://linkedin.com/in/{{ site.data.information.personal.linkedin }}" target="_blank" style="color:inherit; text-decoration:none;">
+                        {{ site.data.information.personal.linkedin }}
+                    </a>
+                </span>
+            </div>
+            {% endif %}
+            
+            {% if site.data.information.personal.website and site.data.information.personal.website != "" %}
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fas fa-globe"></i></div>
+                <span>
+                    <a href="https://{{ site.data.information.personal.website }}" target="_blank" style="color:inherit; text-decoration:none;">
+                        {{ site.data.information.personal.website }}
+                    </a>
+                </span>
+            </div>
+            {% endif %}
+            {% if site.data.information.personal.blog and site.data.information.personal.blog != "" %}
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fa-solid fa-blog"></i></div>
+                <span>
+                    <a href="https://{{ site.data.information.personal.blog }}" target="_blank" style="color:inherit; text-decoration:none;">
+                        {{ site.data.information.personal.blog }}
+                    </a>
+                </span>
+            </div>
+            {% endif %}
+            {% if site.data.information.personal.notepage and site.data.information.personal.notepage != "" %}
+            <div class="contact-item">
+                <div class="contact-icon"><i class="fa-regular fa-clipboard"></i></div>
+                <span>
+                    <a href="https://{{ site.data.information.personal.notepage }}" target="_blank" style="color:inherit; text-decoration:none;">
+                        {{ site.data.information.personal.notepage }}
+                    </a>
+                </span>
+            </div>
+            {% endif %}
+            
+        </div>
+        
+        {% if site.data.information.soft_skills and site.data.information.soft_skills.size > 0 %}
+        <div class="section">
+            <div class="section-title"><i class="fas fa-users"></i> <span class="lang-text" data-tr="YETKİNLİKLER" data-en="COMPETENCIES">YETKİNLİKLER</span></div>
+            {% for skill in site.data.information.soft_skills %}
+            <div class="sidebar-list-item lang-text" data-tr="{{ skill.name_tr }}" data-en="{{ skill.name_en }}">
+                 {{ skill.name_tr }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if site.data.information.skills and site.data.information.skills.size > 0 %}
+        <div class="section">
+            <div class="section-title"><i class="fas fa-code"></i> <span class="lang-text" data-tr="TEKNİK" data-en="TECHNICAL">TEKNİK</span></div>
+            {% for skill in site.data.information.skills %}
+            <div class="skill-container">
+                <div class="skill-header"><span>{{ skill.name }}</span><span>{{ skill.level }}%</span></div>
+                <div class="skill-bar"><div class="skill-level" style="width: {{ skill.level }}%"></div></div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if site.data.information.interests and site.data.information.interests.size > 0 %}
+        <div class="section">
+            <div class="section-title"><i class="fas fa-heart"></i> <span class="lang-text" data-tr="İLGİ ALANLARI" data-en="INTERESTS">İLGİ ALANLARI</span></div>
+            <div>
+                {% for interest in site.data.information.interests %}
+                <span class="interest-tag lang-text" data-tr="{{ interest.name_tr }}" data-en="{{ interest.name_en }}">{{ interest.name_tr }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if site.data.information.languages and site.data.information.languages.size > 0 %}
+        <div class="section">
+            <div class="section-title"><i class="fas fa-language"></i> <span class="lang-text" data-tr="DİLLER" data-en="LANGUAGES">DİLLER</span></div>
+            {% for lang in site.data.information.languages %}
+            <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                <span class="lang-text" data-tr="{{ lang.name_tr }}" data-en="{{ lang.name_en }}">{{ lang.name_tr }}</span>
+                <span class="lang-text" style="color:#93c5fd" data-tr="{{ lang.level_tr }}" data-en="{{ lang.level_en }}">{{ lang.level_tr }}</span>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    
+    <div class="right-column">
+        <h1>{{ site.data.information.personal.name }}</h1>
+        <div class="subtitle lang-text" 
+             data-tr="{{ site.data.information.personal.title_tr }}" 
+             data-en="{{ site.data.information.personal.title_en }}">
+             {{ site.data.information.personal.title_tr }}
+        </div>
+        
+        {% if site.data.information.personal.about_tr and site.data.information.personal.about_tr != "" %}
+        <div class="right-section">
+            <div class="right-section-title"><i class="fas fa-user"></i> <span class="lang-text" data-tr="HAKKIMDA" data-en="ABOUT ME">HAKKIMDA</span></div>
+            <p class="lang-text" style="color: #475569; line-height: 1.7;"
+               data-tr="{{ site.data.information.personal.about_tr }}"
+               data-en="{{ site.data.information.personal.about_en }}">
+               {{ site.data.information.personal.about_tr }}
+            </p>
+        </div>
+        {% endif %}
+        
+        {% if site.data.information.experience and site.data.information.experience.size > 0 %}
+        <div class="right-section">
+            <div class="right-section-title"><i class="fas fa-briefcase"></i> <span class="lang-text" data-tr="İŞ DENEYİMİ" data-en="WORK EXPERIENCE">İŞ DENEYİMİ</span></div>
+            {% for exp in site.data.information.experience %}
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title lang-text" data-tr="{{ exp.role_tr }}" data-en="{{ exp.role_en }}">{{ exp.role_tr }}</div>
+                        <div class="item-company">{{ exp.company }}</div>
+                    </div>
+                    <div class="item-date lang-text" data-tr="{{ exp.date_tr }}" data-en="{{ exp.date_en }}">{{ exp.date_tr }}</div>
+                </div>
+                <div class="item-description">
+                    <ul style="margin-left: 18px;">
+                        <div class="lang-block-tr" style="display:block;">{% for detail in exp.details_tr %} <li>{{ detail }}</li> {% endfor %}</div>
+                        <div class="lang-block-en" style="display:none;">{% for detail in exp.details_en %} <li>{{ detail }}</li> {% endfor %}</div>
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if site.data.information.projects and site.data.information.projects.size > 0 %}
+        <div class="right-section">
+            <div class="right-section-title"><i class="fas fa-project-diagram"></i> <span class="lang-text" data-tr="PROJELER" data-en="PROJECTS">PROJELER</span></div>
+            {% for proj in site.data.information.projects %}
+            <div class="project-box">
+                <div class="item-header">
+                    <div class="item-title">{{ proj.title }}</div>
+                    {% if proj.link and proj.link != "" %}<a href="{{ proj.link }}" class="project-link"><i class="fab fa-github"></i> Source</a>{% endif %}
+                </div>
+                <div class="item-description lang-text" data-tr="{{ proj.desc_tr }}" data-en="{{ proj.desc_en }}" style="margin-bottom:8px;">{{ proj.desc_tr }}</div>
+                <div class="tech-stack">{% for tag in proj.tags %} <span class="tech-tag">{{ tag }}</span> {% endfor %}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if site.data.information.education and site.data.information.education.size > 0 %}
+        <div class="right-section">
+            <div class="right-section-title"><i class="fas fa-graduation-cap"></i> <span class="lang-text" data-tr="EĞİTİM" data-en="EDUCATION">EĞİTİM</span></div>
+            {% for edu in site.data.information.education %}
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title lang-text" data-tr="{{ edu.degree_tr }}" data-en="{{ edu.degree_en }}">{{ edu.degree_tr }}</div>
+                        <div class="item-company">{{ edu.school }}</div>
+                    </div>
+                    <div class="item-date">{{ edu.date }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if site.data.information.references and site.data.information.references.size > 0 %}
+        <div class="right-section">
+            <div class="right-section-title"><i class="fas fa-handshake"></i> <span class="lang-text" data-tr="REFERANSLAR" data-en="REFERENCES">REFERANSLAR</span></div>
+            <div class="references-grid">
+                {% for ref in site.data.information.references %}
+                <div class="ref-card">
+                    <div class="ref-name">{{ ref.name }}</div>
+                    <div class="ref-title">{{ ref.title }}</div>
+                    {% if ref.email and ref.email != "" %}
+                    <a href="mailto:{{ ref.email }}" class="ref-email"><i class="fas fa-envelope"></i> {{ ref.email }}</a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+<script src="{{ site.baseurl }}/assets/js/theme-network.js"></script>

@@ -6,3 +6,4 @@ _site/
 .vscode
 
 note.md
+Gemfile.lock
