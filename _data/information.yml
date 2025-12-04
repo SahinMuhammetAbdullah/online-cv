@@ -106,6 +106,7 @@ education:
     degree_tr: "Bilgisayar Mühendisliği (Lisans)"
     degree_en: "Computer Engineering (BSc)"
     date: "2021 - 2025"
+    gpa: "3.24/4.00"
 
 # YETKİNLİKLER (Soft Skills)
 soft_skills:
