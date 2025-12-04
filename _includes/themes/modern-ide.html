@@ -22,6 +22,14 @@
                 {{ site.data.information.personal.image_initials }}
             </div>
         {% endif %}
+        <div class="mobile-only-intro">
+            <h1>{{ site.data.information.personal.name }}</h1>
+            <div class="job-title lang-text" 
+                 data-tr="{{ site.data.information.personal.title_tr }}" 
+                 data-en="{{ site.data.information.personal.title_en }}">
+                 {{ site.data.information.personal.title_tr }}
+            </div>
+        </div>
 
         <div class="sb-title lang-text" data-tr="İLETİŞİM" data-en="CONTACT">İLETİŞİM</div>
         
@@ -118,11 +126,13 @@
     </div>
 
     <div class="content">
-        <h1>{{ site.data.information.personal.name }}</h1>
-        <div class="job-title lang-text" 
-             data-tr="{{ site.data.information.personal.title_tr }}" 
-             data-en="{{ site.data.information.personal.title_en }}">
-             {{ site.data.information.personal.title_tr }}
+        <div class="desktop-only-intro">
+            <h2>{{ site.data.information.personal.name }}</h2>
+            <div class="job-title lang-text" 
+                 data-tr="{{ site.data.information.personal.title_tr }}" 
+                 data-en="{{ site.data.information.personal.title_en }}">
+                 {{ site.data.information.personal.title_tr }}
+            </div>
         </div>
 
         {% if site.data.information.personal.about_tr and site.data.information.personal.about_tr != "" %}

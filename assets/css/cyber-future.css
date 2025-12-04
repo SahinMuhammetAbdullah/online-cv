@@ -1,0 +1,568 @@
+/* assets/css/cyber-future.css */
+
+/* Temel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0e27;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Animasyonlu Arka Plan Alanı */
+#animatedBg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 50%, #0a0e27 100%);
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #00d4ff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00d4ff;
+    animation: particle-float 20s linear infinite;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(100px);
+        opacity: 0;
+    }
+}
+
+.grid-line {
+    position: absolute;
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.grid-line.horizontal {
+    width: 100%;
+    height: 1px;
+}
+
+.grid-line.vertical {
+    width: 1px;
+    height: 100%;
+}
+
+.code-text {
+    position: absolute;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #00ff41;
+    opacity: 0.15;
+    animation: code-scroll 15s linear infinite;
+}
+
+@keyframes code-scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* CV Konteyner */
+.cv-container {
+    max-width: 850px;
+    margin: 0 auto;
+    background: rgba(15, 20, 40, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px rgba(0, 212, 255, 0.3), 0 0 100px rgba(138, 43, 226, 0.2);
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    min-height: 1100px;
+    position: relative;
+    z-index: 5;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Sol Kolon */
+.left-column {
+    background: linear-gradient(180deg, rgba(0, 212, 255, 0.15) 0%, rgba(138, 43, 226, 0.15) 100%);
+    color: white;
+    padding: 40px 30px;
+    border-right: 1px solid rgba(0, 212, 255, 0.2);
+    position: relative;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: white;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #00d4ff;
+    font-weight: bold;
+    border: 3px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+}
+
+.left-column h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.left-column .title {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    font-weight: 300;
+    color: #00d4ff;
+}
+
+.section {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00d4ff;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.contact-item {
+    margin-bottom: 12px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-item i {
+    color: #00d4ff;
+    width: 20px;
+    text-align: center;
+}
+
+/* Skill Bars */
+.skill-container {
+    margin-bottom: 12px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.skill-bar {
+    background: rgba(0, 212, 255, 0.1);
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.skill-level {
+    background: linear-gradient(90deg, #00d4ff, #8a2be2);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 1s ease;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.8);
+}
+
+/* Sağ Kolon */
+.right-column {
+    padding: 40px 40px;
+    background: rgba(10, 14, 39, 0.6);
+    position: relative;
+}
+
+.right-column h2 {
+    font-size: 32px;
+    background: linear-gradient(135deg, #00d4ff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.right-column .subtitle {
+    font-size: 18px;
+    color: #00d4ff;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.right-section-title {
+    font-size: 20px;
+    color: #00d4ff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgba(0, 212, 255, 0.5);
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.item-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.item-company {
+    font-size: 14px;
+    color: #8a2be2;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.item-date {
+    font-size: 12px;
+    color: #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.item-description {
+    font-size: 13px;
+    color: #b8c5d6;
+    line-height: 1.6;
+}
+
+.item-description li {
+    margin-bottom: 5px;
+}
+
+.desktop-only-intro {
+    display: block;
+}
+
+.mobile-only-intro {
+    display: none;
+}
+
+/* KONTROLLER (FLOATING) */
+.controls {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 100;
+    width: auto;
+
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 1px solid #00d4ff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #00d4ff;
+    background: rgba(0, 212, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn:hover {
+    background: rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
+}
+
+/* MOBİL UYUMLULUK */
+/* --- MOBİL UYUMLULUK (GÜNCELLENDİ: KART GÖRÜNÜMÜ & BÜYÜK FONT & YÜZEN BUTON) --- */
+@media screen and (max-width: 900px) {
+    body {
+        padding: 20px 0 80px 0;
+        /* Alttan buton için boşluk */
+        overflow-x: hidden;
+    }
+
+    .cv-container {
+        width: 92%;
+        /* Kenarlardan boşluk bırak, animasyon görünsün */
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        background: rgba(15, 20, 40, 0.95);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+        /* Neon gölge */
+        border: 1px solid rgba(0, 212, 255, 0.2);
+        border-radius: 12px;
+        /* Köşeleri yuvarlat */
+        min-height: auto;
+        overflow: hidden;
+    }
+
+    /* --- FONT BÜYÜTME & DÜZEN --- */
+
+    /* Sol Kolon */
+    .left-column {
+        width: 100%;
+        padding: 40px 25px;
+        text-align: center;
+        border-right: none;
+        border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    }
+
+    .profile-image {
+        margin: 0 auto 25px;
+        width: 160px;
+        height: 160px;
+        font-size: 55px;
+        border: 4px solid rgba(0, 212, 255, 0.4);
+    }
+
+    .mobile-only-intro {
+        display: block;
+    }
+
+    .desktop-only-intro {
+        display: none;
+    }
+
+    .left-column h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .left-column .title {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+
+    .section-title {
+        font-size: 18px;
+        justify-content: center;
+        margin-top: 30px;
+        text-align: center;
+        border-bottom: 2px solid rgba(0, 212, 255, 0.4);
+    }
+
+    .contact-item {
+        font-size: 16px;
+        justify-content: center;
+        margin-bottom: 18px;
+    }
+
+    /* Yetenek Barları */
+    .skill-container {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .skill-header {
+        font-size: 15px;
+    }
+
+    /* Sağ Kolon */
+    .right-column {
+        padding: 20px 15px;
+    }
+
+    .right-column h2 {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .right-column .subtitle {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 20px;
+    }
+
+    .right-section-title {
+        font-size: 22px;
+        border-bottom: 2px solid rgba(0, 212, 255, 0.4);
+    }
+
+    /* İçerik Metinleri Büyütüldü */
+    p.lang-text {
+        font-size: 16px !important;
+        line-height: 1.8 !important;
+    }
+
+    .item-header {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+
+    .item-title {
+        font-size: 18px;
+    }
+
+    .item-company {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .item-date {
+        font-size: 14px;
+        padding: 5px 15px;
+        align-self: flex-start;
+        border: 1px solid rgba(0, 212, 255, 0.4);
+    }
+
+    .item-description {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .item-description li {
+        margin-bottom: 8px;
+    }
+
+    /* YÜZEN KONTROLLER (FLOATING) - Cyber Temaya Uygun */
+    .controls {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+
+        /* İçeriğe göre boyutlan */
+        width: fit-content;
+        min-width: min-content;
+        max-width: 95%;
+
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+
+        padding: 10px 15px;
+
+        /* Cyber Stil Kapsül */
+        background: rgba(10, 14, 39, 0.95);
+        border: 1px solid rgba(0, 212, 255, 0.4);
+        border-radius: 50px;
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .btn {
+        padding: 8px 12px !important;
+        font-size: 13px !important;
+        box-shadow: 0 0 10px rgba(0, 212, 255, 0.1);
+        white-space: nowrap !important;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(0, 212, 255, 0.15);
+        border: 1px solid rgba(0, 212, 255, 0.5);
+        color: #00d4ff;
+    }
+
+    .btn span {
+        white-space: nowrap;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+        color: #333;
+    }
+
+    #animatedBg,
+    .controls {
+        display: none !important;
+    }
+
+    .cv-container {
+        box-shadow: none;
+        border: none;
+        background: white;
+        color: #333;
+    }
+
+    .left-column {
+        background: #f0f0f0;
+        color: #333;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .right-column {
+        background: white;
+        color: #333;
+    }
+
+    .item-title,
+    .right-column h2,
+    .section-title {
+        color: #000;
+        text-shadow: none;
+    }
+
+    .item-description {
+        color: #333;
+    }
+}

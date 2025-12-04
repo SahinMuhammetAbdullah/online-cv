@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    --paper-bg: #fdfbf7;
+    /* Krem Kağıt Rengi */
+    --ink-color: #2d2a26;
+    /* Mürekkep Siyahı */
+    --accent-color: #c05621;
+    /* Kiremit Rengi (Vurgu) */
+    --line-color: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f0eee9;
+    /* Sayfa dışı biraz daha koyu */
+    color: var(--ink-color);
+    padding: 40px 0 100px 0;
+    min-height: 100vh;
+}
+
+/* ARKA PLAN ANİMASYONU */
+#zenCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* ANA KONTEYNER (Kağıt Görünümü) */
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--paper-bg);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    /* Yumuşak gölge */
+    min-height: 1100px;
+    position: relative;
+    z-index: 10;
+    /* Sidebar YOK, Grid yapısı farklı */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER BÖLÜMÜ (Tam Genişlik) --- */
+.header-section {
+    padding: 50px;
+    border-bottom: 2px solid var(--ink-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: var(--ink-color);
+    margin-bottom: 5px;
+    letter-spacing: -1px;
+}
+
+.header-text .subtitle {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.header-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--ink-color);
+    padding: 5px;
+}
+
+/* --- İLETİŞİM ŞERİDİ --- */
+.contact-bar {
+    background: #f3f0eb;
+    padding: 15px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    border-bottom: 1px solid var(--line-color);
+}
+
+.contact-item {
+    font-size: 13px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-item i {
+    color: var(--accent-color);
+}
+
+.contact-item a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.contact-item a:hover {
+    border-bottom-color: var(--accent-color);
+}
+
+/* --- İÇERİK GRID YAPISI (2 Kolonlu) --- */
+.paper-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Sol geniş, sağ dar */
+    padding: 50px;
+    gap: 50px;
+}
+
+/* Sol Taraf (Ana İçerik) */
+.main-col {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Sağ Taraf (Kenar Bilgileri) */
+.side-col {
+    border-left: 1px solid var(--line-color);
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Bölüm Başlıkları */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--ink-color);
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+
+/* Metin Stilleri */
+p.intro-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    font-style: italic;
+}
+
+/* Deneyim Kartları (Minimal) */
+.job-item {
+    margin-bottom: 30px;
+    page-break-inside: avoid;
+}
+
+.job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.job-role {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--ink-color);
+}
+
+.job-date {
+    font-size: 13px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #666;
+}
+
+.job-company {
+    font-size: 14px;
+    color: var(--accent-color);
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.job-desc li {
+    margin-bottom: 6px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    list-style-type: square;
+}
+
+/* Proje Kartları (Kutu Değil, Liste) */
+.proj-item {
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+}
+
+.proj-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.proj-title {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.proj-link {
+    font-size: 12px;
+    color: var(--accent-color);
+    text-decoration: none;
+    border: 1px solid var(--accent-color);
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.proj-desc {
+    font-size: 14px;
+    color: #555;
+}
+
+.proj-tags span {
+    font-size: 11px;
+    color: #888;
+    margin-right: 5px;
+}
+
+/* Yetenekler (Tag Bulutu Yerine Liste) */
+.skill-list-item {
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 2px;
+}
+
+.skill-val {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+/* Referanslar (Minimal) */
+.ref-item {
+    margin-bottom: 20px;
+    background: #f9f7f2;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.ref-name {
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+}
+
+.ref-title {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+/* KONTROLLER (Yüzen Kapsül - Light Mode) */
+.controls {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    /* Sağa yasla */
+    position: relative;
+    z-index: 100;
+
+    /* Temiz görünüm */
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    padding: 0;
+}
+
+.btn {
+    padding: 8px 20px;
+    border: 1px solid var(--ink-color);
+    border-radius: 4px;
+    /* Kağıt temada hafif köşeli */
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-color);
+    background: transparent;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background: var(--ink-color);
+    color: #fff;
+}
+
+/* MOBİL UYUMLULUK */
+@media screen and (max-width: 900px) {
+    body {
+        padding: 20px 0 80px 0;
+        background: #fdfbf7;
+    }
+
+    .cv-container {
+        width: 92%;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .header-text h1 {
+        font-size: 36px;
+    }
+
+    .paper-grid {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 40px;
+    }
+
+    .side-col {
+        border-left: none;
+        border-top: 1px solid var(--line-color);
+        padding-left: 0;
+        padding-top: 40px;
+    }
+
+    .controls {
+        /* Konumlandırma: Ekranın altına sabitle */
+        position: fixed;
+        top: auto;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+
+        /* Boyut */
+        width: fit-content;
+        min-width: min-content;
+        max-width: 95%;
+        margin: 0;
+
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        align-items: center;
+
+        /* Kapsül Tasarımı (Kağıt Teması için Açık Renk) */
+        padding: 12px 24px;
+        background: rgba(253, 251, 247, 0.95);
+        /* Krem/Beyaz */
+        border: 1px solid #d1d5db;
+        border-radius: 50px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        /* Yumuşak gölge */
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    .btn {
+        padding: 8px 16px !important;
+        font-size: 13px !important;
+        border-radius: 30px;
+        /* Mobilde tam yuvarlak butonlar */
+        background: transparent;
+    }
+
+    .contact-bar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    /* Mobil özel başlık gizleme mantığına gerek yok, bu tema zaten tek parça */
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    #zenCanvas,
+    .controls {
+        display: none !important;
+    }
+
+    .cv-container {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+    }
+
+    .side-col {
+        border-left: 1px solid #ccc;
+    }
+
+    .header-section {
+        border-bottom: 2px solid #000;
+    }
+}

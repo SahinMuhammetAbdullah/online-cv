@@ -32,6 +32,14 @@ body {
     min-height: 100vh;
 }
 
+.mobile-only-intro {
+    display: none;
+}
+
+.desktop-only-intro {
+    display: block;
+}
+
 .controls {
     max-width: 900px;
     margin: 0 auto 20px;
@@ -487,6 +495,14 @@ body {
         font-size: 55px;
     }
 
+    .mobile-only-intro {
+        display: block;
+    }
+
+    .desktop-only-intro {
+        display: none;
+    }
+
     .section-title {
         font-size: 18px;
         justify-content: center;
@@ -578,7 +594,7 @@ body {
     }
 
     /* YÜZEN KONTROLLER (FLOATING) */
-.controls {
+    .controls {
         position: fixed;
         bottom: 30px;
         left: 50%;
@@ -591,13 +607,14 @@ body {
         max-width: 95%;
 
         display: flex;
-        gap: 10px; /* Aralığı optimize ettik */
+        gap: 10px;
+        /* Aralığı optimize ettik */
         align-items: center;
         justify-content: center;
 
         /* Kapsül iç boşluğunu mobilde biraz azalttık */
-        padding: 10px 15px; 
-        
+        padding: 10px 15px;
+
         background-color: rgba(255, 255, 255, 0.95);
         border: 1px solid #e2e8f0;
         border-radius: 50px;
@@ -605,16 +622,20 @@ body {
     }
 
     .btn {
-        padding: 8px 12px !important; /* Buton içi boşluğu azalttık */
-        font-size: 13px !important;   /* Mobilde ideal okunabilirlik */
+        padding: 8px 12px !important;
+        /* Buton içi boşluğu azalttık */
+        font-size: 13px !important;
+        /* Mobilde ideal okunabilirlik */
         box-shadow: none;
-        white-space: nowrap !important; /* Satır kaymasını engelle */
-        flex-shrink: 0; /* Sıkışmayı engelle */
+        white-space: nowrap !important;
+        /* Satır kaymasını engelle */
+        flex-shrink: 0;
+        /* Sıkışmayı engelle */
         display: flex;
         align-items: center;
         gap: 6px;
     }
-    
+
     .btn span {
         white-space: nowrap;
     }

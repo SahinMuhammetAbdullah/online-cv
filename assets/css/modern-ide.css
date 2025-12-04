@@ -21,6 +21,14 @@ body {
     color: var(--text-dark);
 }
 
+.mobile-only-intro {
+    display: none;
+}
+
+.desktop-only-intro {
+    display: block;
+}
+
 #bgCanvas {
     position: fixed;
     top: 0;
@@ -401,6 +409,18 @@ p.lang-text {
         background-color: var(--page-bg);
     }
 
+    .mobile-only-intro {
+        display: block;
+    }
+    
+    .mobile-only-intro h1{
+        color: white;
+    }
+
+    .desktop-only-intro {
+        display: none;
+    }
+
     .page {
         width: 92%;
         /* Ekranı tam kaplamasın, arkadaki animasyon görünsün */
@@ -545,44 +565,51 @@ p.lang-text {
         bottom: 25px;
         left: 50%;
         transform: translateX(-50%);
-        
+
         /* ÖNEMLİ DÜZELTME: Kapsül içeriğe göre genişlesin */
-        width: fit-content; 
+        width: fit-content;
         min-width: min-content;
-        max-width: 95%; /* Ekranın kenarına yapışmasın */
-        
+        max-width: 95%;
+        /* Ekranın kenarına yapışmasın */
+
         display: flex;
-        gap: 10px; /* Aralığı biraz kıstık */
+        gap: 10px;
+        /* Aralığı biraz kıstık */
         justify-content: center;
         align-items: center;
-        
+
         /* Padding'i biraz azalttık ki taşma yapmasın */
         padding: 10px 15px;
-        
+
         background: rgba(15, 23, 42, 0.9);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
-        
+
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 50px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-        
+
         z-index: 9999;
     }
 
     /* Butonları mobilde daha kompakt yap */
     .btn {
-        padding: 8px 12px !important; /* Boşluğu azalttık */
-        font-size: 13px !important;   /* Yazıyı hafif küçülttük */
-        white-space: nowrap !important; /* Asla alt satıra geçme */
-        flex-shrink: 0; /* Asla sıkışıp büzülme */
+        padding: 8px 12px !important;
+        /* Boşluğu azalttık */
+        font-size: 13px !important;
+        /* Yazıyı hafif küçülttük */
+        white-space: nowrap !important;
+        /* Asla alt satıra geçme */
+        flex-shrink: 0;
+        /* Asla sıkışıp büzülme */
         display: flex;
         align-items: center;
         gap: 6px;
     }
-    
+
     /* İkon ve yazı arasındaki bozulmayı önle */
-    .btn span, .btn i {
+    .btn span,
+    .btn i {
         white-space: nowrap;
     }
 }

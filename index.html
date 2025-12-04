@@ -32,6 +32,12 @@ layout: null
         {% include themes/modern-ide.html %}
     {% elsif site.cv_theme == 'corporate-blue' %}
         {% include themes/corporate-blue.html %}
+    {% elsif site.cv_theme == 'cyber-future' %}
+        {% include themes/cyber-future.html %}
+    {% elsif site.cv_theme == 'ai-neural' %}
+        {% include themes/ai-neural.html %}
+    {% elsif site.cv_theme == 'paper-minimal' %}
+        {% include themes/paper-minimal.html %}
     {% else %}
         <p style="text-align:center; padding:50px;">Lütfen _config.yml dosyasından geçerli bir tema seçin.</p>
     {% endif %}
