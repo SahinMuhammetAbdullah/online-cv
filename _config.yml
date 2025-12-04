@@ -8,7 +8,7 @@ baseurl: ""
 url: "https://cv.masahin.dev" 
 
 # --- TEMA SEÇİMİ ---
-# Seçenekler: 'modern-ide', 'corporate-blue', 'cyber-future', 'ai-neural', 'paper-minimal'
+# Seçenekler: 'modern-ide', 'corporate-blue', 'cyber-future', 'ai-neural', 'paper-minimal', 'neon-genesis'
 cv_theme: "modern-ide" 
 
 # --- SEO & EKLENTİLER ---

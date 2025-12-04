@@ -38,20 +38,33 @@
         {% if site.data.information.personal.email %}
         <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:{{ site.data.information.personal.email }}">{{ site.data.information.personal.email }}</a></div>
         {% endif %}
+        
         {% if site.data.information.personal.phone %}
         <div class="contact-item"><i class="fas fa-phone"></i> {{ site.data.information.personal.phone }}</div>
         {% endif %}
+        
         {% if site.data.information.personal.location %}
         <div class="contact-item"><i class="fas fa-map-marker-alt"></i> {{ site.data.information.personal.location }}</div>
         {% endif %}
-        {% if site.data.information.personal.website %}
-        <div class="contact-item"><i class="fas fa-globe"></i> <a href="https://{{ site.data.information.personal.website }}" target="_blank">Web</a></div>
-        {% endif %}
+        
         {% if site.data.information.personal.linkedin %}
         <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/{{ site.data.information.personal.linkedin }}" target="_blank">LinkedIn</a></div>
         {% endif %}
+        
         {% if site.data.information.personal.github %}
         <div class="contact-item"><i class="fab fa-github"></i> <a href="https://github.com/{{ site.data.information.personal.github }}" target="_blank">GitHub</a></div>
+        {% endif %}
+
+        {% if site.data.information.personal.website %}
+        <div class="contact-item"><i class="fas fa-globe"></i> <a href="https://{{ site.data.information.personal.website }}" target="_blank">{{ site.data.information.personal.website }}</a></div>
+        {% endif %}
+
+        {% if site.data.information.personal.blog %}
+        <div class="contact-item"><i class="fa-solid fa-blog"></i> <a href="https://{{ site.data.information.personal.blog }}" target="_blank">{{ site.data.information.personal.blog }}</a></div>
+        {% endif %}
+
+        {% if site.data.information.personal.notepage %}
+        <div class="contact-item"><i class="fa-regular fa-clipboard"></i> <a href="https://{{ site.data.information.personal.notepage }}" target="_blank">{{ site.data.information.personal.notepage }}</a></div>
         {% endif %}
     </div>
 

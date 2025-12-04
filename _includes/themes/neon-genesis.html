@@ -1,0 +1,247 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/neon-genesis.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<canvas id="genesisCanvas"></canvas>
+
+<div class="controls">
+    <button class="btn" onclick="toggleLang()">
+        <i class="fas fa-globe"></i> <span id="langLabel">TR / EN</span>
+    </button>
+    {% if site.enable_pdf_download %}
+    <button class="btn" onclick="downloadPDF()">
+        <i class="fas fa-file-pdf"></i> PDF
+    </button>
+    {% endif %}
+</div>
+
+<div class="cv-container" id="cvContent">
+
+    <div class="left-panel">
+        <div class="holo-profile-container">
+            {% if site.data.information.personal.image_path and site.data.information.personal.image_path != "" %}
+            <img src="{{ site.baseurl }}{{ site.data.information.personal.image_path }}" class="profile-image"
+                alt="Profile">
+            {% elsif site.data.information.personal.image_initials %}
+            <div class="profile-image"
+                style="background:#000; display:flex; align-items:center; justify-content:center; color:var(--neon-cyan);">
+                {{ site.data.information.personal.image_initials }}
+            </div>
+            {% endif %}
+        </div>
+
+        <h1 class="glitch-name">{{ site.data.information.personal.name }}</h1>
+        <div class="subtitle lang-text" data-tr="{{ site.data.information.personal.title_tr }}"
+            data-en="{{ site.data.information.personal.title_en }}">
+            {{ site.data.information.personal.title_tr }}
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <div class="shard-title lang-text" data-tr="BAĞLANTI" data-en="UPLINK"><i class="fas fa-satellite-dish"></i>
+                BAĞLANTI</div>
+
+            {% if site.data.information.personal.email %}
+            <div class="contact-item"><i class="fas fa-envelope"></i> <a
+                    href="mailto:{{ site.data.information.personal.email }}">{{ site.data.information.personal.email
+                    }}</a></div>
+            {% endif %}
+
+            {% if site.data.information.personal.phone %}
+            <div class="contact-item"><i class="fas fa-phone"></i> {{ site.data.information.personal.phone }}</div>
+            {% endif %}
+
+            {% if site.data.information.personal.location %}
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> {{ site.data.information.personal.location
+                }}</div>
+            {% endif %}
+
+            {% if site.data.information.personal.linkedin %}
+            <div class="contact-item"><i class="fab fa-linkedin"></i> <a
+                    href="https://linkedin.com/in/{{ site.data.information.personal.linkedin }}"
+                    target="_blank">LinkedIn</a></div>
+            {% endif %}
+
+            {% if site.data.information.personal.github %}
+            <div class="contact-item"><i class="fab fa-github"></i> <a
+                    href="https://github.com/{{ site.data.information.personal.github }}" target="_blank">GitHub</a>
+            </div>
+            {% endif %}
+
+            {% if site.data.information.personal.website %}
+            <div class="contact-item"><i class="fas fa-globe"></i> <a
+                    href="https://{{ site.data.information.personal.website }}" target="_blank">{{
+                    site.data.information.personal.website }}</a></div>
+            {% endif %}
+
+            {% if site.data.information.personal.blog %}
+            <div class="contact-item"><i class="fa-solid fa-blog"></i> <a
+                    href="https://{{ site.data.information.personal.blog }}" target="_blank">{{
+                    site.data.information.personal.blog }}</a></div>
+            {% endif %}
+
+            {% if site.data.information.personal.notepage %}
+            <div class="contact-item"><i class="fa-regular fa-clipboard"></i> <a
+                    href="https://{{ site.data.information.personal.notepage }}" target="_blank">{{
+                    site.data.information.personal.notepage }}</a></div>
+            {% endif %}
+        </div>
+
+        {% if site.data.information.skills %}
+        <div>
+            <div class="shard-title lang-text" data-tr="TEKNİK" data-en="TECHNICAL"><i class="fas fa-microchip"></i>
+                TEKNİK</div>
+            {% for skill in site.data.information.skills %}
+            <div class="skill-container">
+                <div class="skill-header"><span>{{ skill.name }}</span><span>{{ skill.level }}%</span></div>
+                <div class="energy-bar-bg">
+                    <div class="energy-bar-fill" style="width: {{ skill.level }}%"></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if site.data.information.soft_skills %}
+        <div style="margin-top:30px;">
+            <div class="shard-title lang-text" data-tr="YETKİNLİKLER" data-en="COMPETENCIES"><i
+                    class="fas fa-brain"></i> YETKİNLİKLER</div>
+            {% for skill in site.data.information.soft_skills %}
+            <div class="contact-item lang-text" data-tr="{{ skill.name_tr }}" data-en="{{ skill.name_en }}"
+                style="font-family:'Courier New', monospace; color:#00ff41; margin-bottom:5px;">
+                > {{ skill.name_tr }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if site.data.information.interests %}
+        <div style="margin-top:30px;">
+            <div class="shard-title lang-text" data-tr="İLGİ ALANLARI" data-en="INTERESTS"><i class="fas fa-heart"></i>
+                İLGİ ALANLARI</div>
+            <div style="display:flex; flex-wrap:wrap; gap:5px;">
+                {% for interest in site.data.information.interests %}
+                <span class="cyber-tag lang-text" data-tr="{{ interest.name_tr }}" data-en="{{ interest.name_en }}">
+                    {{ interest.name_tr }}
+                </span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if site.data.information.languages %}
+        <div style="margin-top:30px;">
+            <div class="shard-title lang-text" data-tr="DİLLER" data-en="LANGUAGES"><i class="fas fa-language"></i>
+                DİLLER</div>
+            {% for lang in site.data.information.languages %}
+            <div
+                style="display: flex; justify-content: space-between; margin-bottom: 8px; border-bottom:1px dashed rgba(0,255,255,0.2); padding-bottom:2px;">
+                <span class="lang-text" style="color:var(--neon-cyan);" data-tr="{{ lang.name_tr }}"
+                    data-en="{{ lang.name_en }}">{{ lang.name_tr }}</span>
+                <span class="lang-text" style="color:var(--neon-pink);" data-tr="{{ lang.level_tr }}"
+                    data-en="{{ lang.level_en }}">{{ lang.level_tr }}</span>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="right-panel">
+
+        {% if site.data.information.personal.about_tr %}
+        <div style="margin-bottom: 40px;">
+            <div class="shard-title lang-text" data-tr="VERİ GİRİŞİ" data-en="DATA LOG"><i class="fas fa-terminal"></i>
+                VERİ GİRİŞİ</div>
+            <p class="lang-text"
+                style="line-height:1.7; color:#ccc; border-left:3px solid var(--neon-yellow); padding-left:15px;"
+                data-tr="{{ site.data.information.personal.about_tr }}"
+                data-en="{{ site.data.information.personal.about_en }}">
+                {{ site.data.information.personal.about_tr }}
+            </p>
+        </div>
+        {% endif %}
+
+        {% if site.data.information.experience %}
+        <div>
+            <div class="shard-title lang-text" data-tr="GÖREV GEÇMİŞİ" data-en="MISSION HISTORY"><i
+                    class="fas fa-history"></i> GÖREV GEÇMİŞİ</div>
+            {% for exp in site.data.information.experience %}
+            <div class="holo-card">
+                <div class="card-head">
+                    <div class="card-title lang-text" data-tr="{{ exp.role_tr }}" data-en="{{ exp.role_en }}">{{
+                        exp.role_tr }}</div>
+                    <div class="card-date lang-text" data-tr="{{ exp.date_tr }}" data-en="{{ exp.date_en }}">{{
+                        exp.date_tr }}</div>
+                </div>
+                <div class="card-sub">{{ exp.company }}</div>
+                <ul class="card-desc">
+                    <div class="lang-block-tr" style="display:block;">{% for detail in exp.details_tr %} <li>{{ detail
+                            }}</li> {% endfor %}</div>
+                    <div class="lang-block-en" style="display:none;">{% for detail in exp.details_en %} <li>{{ detail }}
+                        </li> {% endfor %}</div>
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if site.data.information.projects %}
+        <div>
+            <div class="shard-title lang-text" data-tr="PROJE ÇIKTILARI" data-en="PROJECT OUTPUTS"><i
+                    class="fas fa-project-diagram"></i> PROJE ÇIKTILARI</div>
+            {% for proj in site.data.information.projects %}
+            <div class="holo-card" style="border-color: var(--neon-pink);">
+                <div class="card-head">
+                    <div class="card-title">{{ proj.title }}</div>
+                    {% if proj.link %}<a href="{{ proj.link }}"
+                        style="color:var(--neon-pink); text-decoration:none;"><i
+                            class="fas fa-link"></i> ERİŞİM</a>{% endif %}
+                </div>
+                <div class="card-desc lang-text" data-tr="{{ proj.desc_tr }}" data-en="{{ proj.desc_en }}"
+                    style="margin-bottom:10px; list-style:none;">{{ proj.desc_tr }}</div>
+                <div>
+                    {% for tag in proj.tags %} <span class="cyber-tag">[{{ tag }}]</span> {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if site.data.information.education %}
+        <div>
+            <div class="shard-title lang-text" data-tr="EĞİTİM MODÜLÜ" data-en="EDUCATION MODULE"><i
+                    class="fas fa-graduation-cap"></i> EĞİTİM MODÜLÜ</div>
+            {% for edu in site.data.information.education %}
+            <div class="holo-card" style="border-color: var(--neon-yellow); padding:15px;">
+                <div class="card-head">
+                    <div class="card-title lang-text"  data-tr="{{ edu.degree_tr }}"
+                        data-en="{{ edu.degree_en }}">{{ edu.degree_tr }}</div>
+                    <div class="card-date">{{ edu.date }}</div>
+                </div>
+                <div class="card-sub" style="color:#fff;">{{ edu.school }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if site.data.information.references %}
+        <div>
+            <div class="shard-title lang-text" data-tr="DOĞRULAMA" data-en="VERIFICATION"><i
+                    class="fas fa-shield-alt"></i> DOĞRULAMA</div>
+            <div class="ref-grid">
+                {% for ref in site.data.information.references %}
+                <div class="ref-box">
+                    <div style="font-weight:bold; color:var(--neon-yellow);">{{ ref.name }}</div>
+                    <div style="color:var(--neon-cyan); font-style:italic;">{{ ref.title }}</div>
+                    {% if ref.email %}<a href="mailto:{{ ref.email }}"
+                        style="color:var(--neon-pink); text-decoration:none;">{{ ref.email }}</a>{%
+                    endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+<script src="{{ site.baseurl }}/assets/js/theme-neon.js"></script>
