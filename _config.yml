@@ -5,7 +5,7 @@ email: iletisim@ornek.com
 description: >- # Google'da görünecek açıklama
   Muhammet Abdullah Şahin'in profesyonel CV'si. Python, Flutter ve AI alanında çalışmalar.
 baseurl: "" 
-url: "https://cv.masahin.dev" 
+url: "https://cv.masahin.dev/" 
 
 # --- TEMA SEÇİMİ ---
 # Seçenekler: 'modern-ide', 'corporate-blue', 'cyber-future', 'ai-neural', 'paper-minimal', 'neon-genesis'
